@@ -57,6 +57,7 @@ function Navbar() {
         elevation={0}
         style={{
           padding: "10px",
+          
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",

@@ -110,7 +110,7 @@ const Home = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("https://apimocha.com/quicksell/data");
+        const response = await axios.get("https://api.quicksell.co/v1/internal/frontend-assignment");
         setData(response.data);
         setIsDataLoaded(true);
       } catch (error) {
@@ -188,13 +188,14 @@ const Home = () => {
   //
 
   return (
-    <Box
+    <Box 
       style={{
         backgroundColor: "#f5f5f5",
         minHeight: "100vh",
-        padding: "1rem",
+        paddingLeft:"320px"
       }}
     >
+      
       <MainContainer container>
         <Backdrop
           open={!isDataLoaded}

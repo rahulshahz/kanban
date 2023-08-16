@@ -1,4 +1,4 @@
-import "./App.css";
+
 
 import React from "react";
 import {
@@ -11,18 +11,28 @@ import {
 import { AppStateProvider } from "./AppStateContext";
 import Home from "./components/Home";
 import Navbar from "./components/Navbar";
+import Nav from "./components/Nav";
+import { Flowbite } from "flowbite-react";
+import Side from "./components/Side";
 
 function App() {
   return (
-    <Router>
+    <Flowbite>
+      <Router>
       <AppStateProvider>
-        <Navbar />
+      
+        <Nav/>
+        {/* <Side/> */}
+        <Navbar  />
+
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
+        
       </AppStateProvider>
-    </Router>
+    </Router></Flowbite>
+    
   );
 }
 
