@@ -11,18 +11,16 @@ import {
 import { AppStateProvider } from "./AppStateContext";
 import Home from "./components/Home";
 import Navbar from "./components/Navbar";
-import Nav from "./components/Nav";
-import { Flowbite } from "flowbite-react";
-import Side from "./components/Side";
+
 
 function App() {
   return (
-    <Flowbite>
+
       <Router>
       <AppStateProvider>
       
-        <Nav/>
-        {/* <Side/> */}
+
+        
         <Navbar  />
 
         <Routes>
@@ -31,7 +29,7 @@ function App() {
         </Routes>
         
       </AppStateProvider>
-    </Router></Flowbite>
+    </Router>
     
   );
 }
